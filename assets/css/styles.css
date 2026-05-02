@@ -1,0 +1,192 @@
+/* Web programming-1 homework — shared layout */
+:root {
+  --bg: #1a1512;
+  --surface: #2d2620;
+  --surface2: #3d342b;
+  --text: #f5ebe0;
+  --muted: #c4b8a8;
+  --accent: #e85d04;
+  --accent2: #dc2f02;
+  --ok: #2a9d8f;
+  --danger: #e63946;
+  --radius: 10px;
+  --font: system-ui, "Segoe UI", Roboto, Ubuntu, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.wrap {
+  width: min(1100px, 92vw);
+  margin-inline: auto;
+}
+
+.site-header {
+  background: linear-gradient(135deg, var(--surface2) 0%, var(--surface) 100%);
+  border-bottom: 3px solid var(--accent);
+  padding: 1.75rem 0 1.25rem;
+}
+
+.site-header h1 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.35rem, 4vw, 1.85rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.site-nav {
+  background: var(--surface);
+  border-bottom: 1px solid var(--surface2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  padding: 0.65rem 0;
+}
+
+.site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.45rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background 0.15s, color 0.15s;
+}
+
+.site-nav a:hover {
+  background: var(--surface2);
+  color: #fff;
+}
+
+.site-nav a[aria-current="page"] {
+  background: var(--accent);
+  color: #fff;
+}
+
+.main-area {
+  padding: 2rem 0 3rem;
+  min-height: 46vh;
+}
+
+.page-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.lead {
+  color: var(--muted);
+  margin: 0 0 1.5rem;
+  max-width: 62ch;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  border: 1px solid var(--surface2);
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.card p {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--accent2);
+}
+
+.placeholder-box {
+  background: var(--surface);
+  border: 1px dashed var(--muted);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  color: var(--muted);
+}
+
+.site-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--surface2);
+  padding: 1.5rem 0 2rem;
+  margin-top: auto;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.site-footer .neptun {
+  font-family: ui-monospace, monospace;
+  color: var(--accent);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+code {
+  font-size: 0.88em;
+  background: var(--surface2);
+  padding: 0.12em 0.45em;
+  border-radius: 6px;
+}

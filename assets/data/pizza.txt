@@ -1,0 +1,75 @@
+pname	categoryname	vegetarian
+Áfonyás	king	0
+Babos	knight	0
+Barbecue chicken	knight	0
+Betyáros	king	0
+Caribi	page	0
+Country	king	0
+Csabesz	king	0
+Csupa sajt	knight	1
+Erdő kapitánya	page	0
+Erős János	knight	0
+Excellent	king	0
+Főnök kedvence	king	0
+Francia	nobleman	0
+Frankfurti	king	0
+Füstös	knight	0
+Gino	king	0
+Gombás	page	1
+Góré	knight	0
+Görög	king	0
+Gyros pizza	king	0
+HamAndEggs	knight	0
+Hamm	knight	0
+Hawaii	nobleman	0
+Hellas	king	0
+Hercegnő	king	0
+Ilike	knight	0
+Ínyenc	knight	0
+Jázmin álma	knight	0
+Jobbágy	king	0
+Juhtúrós	knight	0
+Kagylós	king	0
+Kétszínű	knight	0
+Kiadós	knight	0
+Király pizza	king	0
+Kívánság	knight	1
+Kolbászos	page	0
+Lagúna	king	1
+Lecsó	king	0
+Maffiózó	knight	0
+Magvas	king	1
+Magyaros	knight	0
+Máj Fair Lady	king	0
+Mamma fia	king	0
+Mexikói	nobleman	0
+Mixi	nobleman	1
+Nikó	king	0
+Nordic	king	0
+Nyuszó-Muszó	king	0
+Pacalos	knight	0
+Pástétomos	king	0
+Pásztor	king	0
+Pipis	knight	0
+Popey	king	0
+Quattro	king	0
+Ráki	king	0
+Rettenetes magyar	knight	0
+Röfi	king	0
+Sajtos	page	1
+So-ku	page	0
+Son-go-ku	nobleman	1
+Sonkás	page	0
+Spanyol	king	0
+Spencer	nobleman	0
+Szalámis	page	0
+Szardíniás	knight	0
+Szerzetes	king	0
+Szőke kapitány	king	0
+Tenger gyümölcsei	king	0
+Tonhalas	knight	0
+Törperős	knight	0
+Tündi kedvence	king	0
+Tüzes halál	king	0
+Vega	knight	1
+Zöldike	nobleman	1
