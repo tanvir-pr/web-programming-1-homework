@@ -28,11 +28,12 @@
 
   <main class="wrap main-area">
     <h2 class="page-title">React CRUD</h2>
-    <p class="lead">Use React with pizza file data and full CRUD. Follow your seminar setup (local React or standalone without Babel).</p>
+    <p class="lead">
+      Full CRUD on the same <code>pizza.txt</code> / <code>category.txt</code> data.
+      React is loaded from official UMD builds; UI is built with <code>React.createElement</code> only (no Babel in the browser).
+      If your course requires a local npm build instead, you can replace this with your bundled output.
+    </p>
     <div id="react-crud-root"></div>
-    <div class="placeholder-box">
-      <strong>Step 3:</strong> Mount your React app into <code>#react-crud-root</code> (see starter course examples).
-    </div>
   </main>
 
   <footer class="site-footer">
@@ -42,5 +43,10 @@
       <p><span class="neptun">Partner Name</span> — Neptun: <span class="neptun">PARTNERCODE</span></p>
     </div>
   </footer>
+
+  <!-- React 18 UMD (development). Switch to *.production.min.js for deployment if you prefer. -->
+  <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+  <script src="assets/js/react-pizza-crud.js"></script>
 </body>
 </html>

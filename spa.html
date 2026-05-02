@@ -28,11 +28,14 @@
 
   <main class="wrap main-area">
     <h2 class="page-title">SPA</h2>
-    <p class="lead">Two menu items; each loads one React application (e.g. calculator-level + game-level). Document sources in your PDF.</p>
+    <p class="lead">
+      Two menu items (toolbar buttons) switch views inside this page only — no full page reload.
+      <strong>Calculator:</strong> seminar-style arithmetic UI (<code>useState</code>, operands/operators).
+      <strong>Tic-tac-toe:</strong> classic React board tutorial pattern.
+      Source + deploy copies live under <code>react/calculator-app</code> and <code>react/tictactoe-app</code> (<code>src</code> and <code>dist</code>).
+      Mention both references in your PDF.
+    </p>
     <div id="spa-root"></div>
-    <div class="placeholder-box">
-      <strong>Step 4:</strong> Build menu + two apps here; copy built <code>src</code>/<code>dist</code> into <code>react/</code> on GitHub per assignment.
-    </div>
   </main>
 
   <footer class="site-footer">
@@ -42,5 +45,11 @@
       <p><span class="neptun">Partner Name</span> — Neptun: <span class="neptun">PARTNERCODE</span></p>
     </div>
   </footer>
+
+  <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+  <script src="react/calculator-app/dist/calculator-app.js"></script>
+  <script src="react/tictactoe-app/dist/tictactoe-app.js"></script>
+  <script src="assets/js/spa-shell.js"></script>
 </body>
 </html>
