@@ -28,10 +28,57 @@
 
   <main class="wrap main-area">
     <h2 class="page-title">Fetch API CRUD</h2>
-    <p class="lead">Plain JavaScript + <code>fetch()</code> to your PHP API; data lives in MySQL on hosting.</p>
-    <div class="placeholder-box">
-      <strong>Step 5 (with partner):</strong> PHP under <code>api/</code>, adjust URL to match hosting (e.g. <code>api/pizza.php</code>).
-    </div>
+    <p class="lead">
+      Plain JavaScript calls <code>api/pizzas.php</code> with <code>GET / POST / PUT / DELETE</code>.
+      Rows are stored in <strong>MySQL</strong>, not only in the browser. Edit credentials in <code>api/db.php</code>;
+      create DB and run <code>database/schema.sql</code> then <code>database/seed_pizzas.sql</code> (phpMyAdmin or CLI).
+      Serve with <strong>PHP</strong> (XAMPP / hosting), not <code>python -m http.server</code> alone.
+    </p>
+
+    <p id="fetch-status" class="crud-status" role="status"></p>
+
+    <section class="crud-panel" aria-labelledby="fetch-form-heading">
+      <h3 id="fetch-form-heading" class="crud-subtitle">Add or edit pizza (server)</h3>
+      <form id="fetch-pizza-form" class="crud-form">
+        <div class="field">
+          <label for="fetch-pname">Pizza name</label>
+          <input type="text" id="fetch-pname" name="pname" required maxlength="200" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="fetch-categoryname">Category</label>
+          <select id="fetch-categoryname" name="categoryname"></select>
+        </div>
+        <div class="field field-check">
+          <input type="checkbox" id="fetch-vegetarian" name="vegetarian">
+          <label for="fetch-vegetarian">Vegetarian</label>
+        </div>
+        <div class="field-actions">
+          <button type="submit" class="btn btn-primary" id="fetch-save-submit">Add pizza</button>
+          <button type="button" class="btn btn-secondary" id="fetch-cancel-edit" hidden>Cancel edit</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="crud-panel" aria-labelledby="fetch-table-heading">
+      <h3 id="fetch-table-heading" class="crud-subtitle">
+        Pizza list from database
+        <span class="crud-meta">(<span id="fetch-pizza-count">0</span> rows)</span>
+      </h3>
+      <div class="table-scroll">
+        <table class="crud-table" id="fetch-pizza-table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Category</th>
+              <th scope="col">Vegetarian</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -41,5 +88,7 @@
       <p><span class="neptun">Partner Name</span> — Neptun: <span class="neptun">PARTNERCODE</span></p>
     </div>
   </footer>
+
+  <script src="assets/js/fetch-pizza-crud.js" defer></script>
 </body>
 </html>
