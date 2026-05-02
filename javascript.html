@@ -28,10 +28,49 @@
 
   <main class="wrap main-area">
     <h2 class="page-title">JavaScript CRUD</h2>
-    <p class="lead">Load <code>assets/data/pizza.txt</code>, store rows in an array, implement Create / Read / Update / Delete.</p>
-    <div class="placeholder-box">
-      <strong>Step 2:</strong> Add your table, form, and script here (<code>assets/js/pizza-crud.js</code>).
-    </div>
+    <p class="lead">Data is loaded from <code>assets/data/pizza.txt</code> into an in-memory array. Categories for the form come from <code>assets/data/category.txt</code>. Create, read, update, and delete only affect the array in this browser session.</p>
+
+    <p id="crud-status" class="crud-status" role="status"></p>
+
+    <section class="crud-panel" aria-labelledby="form-heading">
+      <h3 id="form-heading" class="crud-subtitle">Add or edit pizza</h3>
+      <form id="pizza-form" class="crud-form">
+        <div class="field">
+          <label for="pname">Pizza name</label>
+          <input type="text" id="pname" name="pname" required maxlength="200" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="categoryname">Category</label>
+          <select id="categoryname" name="categoryname"></select>
+        </div>
+        <div class="field field-check">
+          <input type="checkbox" id="vegetarian" name="vegetarian">
+          <label for="vegetarian">Vegetarian</label>
+        </div>
+        <div class="field-actions">
+          <button type="submit" class="btn btn-primary" id="save-submit">Add pizza</button>
+          <button type="button" class="btn btn-secondary" id="cancel-edit" hidden>Cancel edit</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="crud-panel" aria-labelledby="table-heading">
+      <h3 id="table-heading" class="crud-subtitle">Pizza list <span class="crud-meta">(<span id="pizza-count">0</span> rows)</span></h3>
+      <div class="table-scroll">
+        <table class="crud-table" id="pizza-table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Category</th>
+              <th scope="col">Vegetarian</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -41,5 +80,7 @@
       <p><span class="neptun">Partner Name</span> — Neptun: <span class="neptun">PARTNERCODE</span></p>
     </div>
   </footer>
+
+  <script src="assets/js/pizza-crud.js" defer></script>
 </body>
 </html>

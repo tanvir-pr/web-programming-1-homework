@@ -190,3 +190,141 @@ code {
   padding: 0.12em 0.45em;
   border-radius: 6px;
 }
+
+/* JavaScript CRUD page */
+.crud-status {
+  min-height: 1.5rem;
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.crud-status--error {
+  color: var(--danger);
+}
+
+.crud-panel {
+  background: var(--surface);
+  border: 1px solid var(--surface2);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.crud-subtitle {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+}
+
+.crud-meta {
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.crud-form {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 560px) {
+  .crud-form {
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+  }
+
+  .crud-form .field-check,
+  .crud-form .field-actions {
+    grid-column: 1 / -1;
+  }
+
+  .crud-form .field-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+.field label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.field input[type="text"],
+.field select {
+  width: 100%;
+  max-width: 320px;
+  padding: 0.5rem 0.65rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--surface2);
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.field-check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.field-check label {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.btn-secondary {
+  background: var(--surface2);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background: #4a4036;
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.btn-danger:hover {
+  filter: brightness(1.08);
+}
+
+.btn-sm {
+  padding: 0.35rem 0.65rem;
+  font-size: 0.8rem;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.crud-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.crud-table th,
+.crud-table td {
+  text-align: left;
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--surface2);
+}
+
+.crud-table th {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.crud-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
