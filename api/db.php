@@ -1,12 +1,20 @@
 <?php
 /**
- * PDO connection — change credentials on InfinityFree / Nethely / localhost XAMPP.
- * Matches homework pattern: host, db name, user, password.
+ * PDO connection — copy MySQL values from your host’s control panel (InfinityFree:
+ * Dashboard → MySQL Databases → hostname like sql*.infinityfree.com, DB name, user, password).
+ * Homework note: use the hostname your provider shows for PHP on that server (often not plain
+ * “localhost” on free hosts — follow the red-labelled values in the assignment PDFs).
  */
-$host = "localhost";
-$db   = "webprog1_homework";
-$user = "root";
-$pass = "";
+$host = "sql113.infinityfree.com";
+$db   = "if0_41812004_project";
+$user = "if0_41812004";
+$pass = "GRDh2Koe9QWv1pS";
+
+// Example after uploading to InfinityFree (replace with YOUR panel values):
+// $host = "sql123.infinityfree.com";
+// $db   = "if0_XXXXXX_yourdbname";
+// $user = "if0_XXXXXX";
+// $pass = "your_database_password";
 
 try {
     $pdo = new PDO(
